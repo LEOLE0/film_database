@@ -115,11 +115,13 @@ FROM film
 LEFT JOIN role ON film.idFilm = role.idFilm
 WHERE role.idFilm IS NULL;
 
--- Exo 18: Quelles sont les films non notés par l'internaute Prénom1 Nom1SELECT film.titre
+-- Exo 18: Quelles sont les films non notés par l'internaute Prénom1 Nom1
+SELECT film.titre
 FROM film
 LEFT JOIN notation ON film.idFilm = notation.idFilm
 LEFT JOIN internaute ON notation.email = internaute.email
-WHERE internaute.prénom = 'Prénom1' AND internaute.nom = 'Nom1' AND notation.note IS NULL
+WHERE internaute.prénom = 'Prénom1' AND internaute.nom = 'Nom1' AND notation.note IS NULL;
+
 
 -- Exo 19: Quels acteurs n’ont jamais réalisé de film ?
 SELECT DISTINCT acteur.nom, acteur.prénom
