@@ -54,6 +54,7 @@ JOIN internaute ON notation.email = internaute.email
 WHERE internaute.prénom = 'Prénom0' AND internaute.nom = 'Nom0';
 
 -- Exo 10: Films dont le réalisateur est Tim Burton, et l’un des acteurs Johnny Depp
+SELECT film.titre
 FROM film
 JOIN artiste AS réalisateur ON film.idRéalisateur = réalisateur.idArtiste
 JOIN role ON film.idFilm = role.idFilm
